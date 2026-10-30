@@ -1,0 +1,179 @@
+[
+  {
+    "id": "t3_demo0",
+    "url": "https://www.reddit.com/r/demo_automation/comments/demo0/example/",
+    "username": "demo_user_0",
+    "communityName": "r/demo_automation",
+    "title": "Demo: We need an AI automation platform this week. Any recommendat",
+    "body": "We need an AI automation platform this week. Any recommendations?",
+    "dataType": "post",
+    "age_hours": 0,
+    "demo_score": {
+      "score": 5,
+      "intent_type": "tool_request",
+      "competitor_mentioned": null,
+      "pain_point": "Needs an automation platform now",
+      "urgency": "high",
+      "reason": "Explicit immediate tool evaluation.",
+      "reply_angle": "Ask which workflows and approval controls they need."
+    }
+  },
+  {
+    "id": "t3_demo1",
+    "url": "https://www.reddit.com/r/demo_automation/comments/demo1/example/",
+    "username": "demo_user_1",
+    "communityName": "r/demo_automation",
+    "title": "Demo: resolve.ai keeps failing our workflow. Looking for an altern",
+    "body": "resolve.ai keeps failing our workflow. Looking for an alternative.",
+    "dataType": "post",
+    "age_hours": 8,
+    "demo_score": {
+      "score": 5,
+      "intent_type": "competitor_complaint",
+      "competitor_mentioned": "resolve.ai",
+      "pain_point": "Unreliable existing automation",
+      "urgency": "high",
+      "reason": "Named competitor pain with switching intent.",
+      "reply_angle": "Ask for failure details and share a neutral evaluation checklist."
+    }
+  },
+  {
+    "id": "t3_demo2",
+    "url": "https://www.reddit.com/r/demo_automation/comments/demo2/example/",
+    "username": "demo_user_2",
+    "communityName": "r/demo_automation",
+    "title": "Demo: Our agents fail in production and I spend hours fixing manua",
+    "body": "Our agents fail in production and I spend hours fixing manual handoffs.",
+    "dataType": "post",
+    "age_hours": 16,
+    "demo_score": {
+      "score": 4,
+      "intent_type": "problem_description",
+      "competitor_mentioned": null,
+      "pain_point": "Agent reliability and manual handoffs",
+      "urgency": "medium",
+      "reason": "Active pain in the configured category.",
+      "reply_angle": "Suggest tracing failures and adding human review at risky steps."
+    }
+  },
+  {
+    "id": "t3_demo3",
+    "url": "https://www.reddit.com/r/demo_automation/comments/demo3/example/",
+    "username": "demo_user_3",
+    "communityName": "r/demo_automation",
+    "title": "Demo: What are the tradeoffs of AI agents versus scripts?",
+    "body": "What are the tradeoffs of AI agents versus scripts?",
+    "dataType": "post",
+    "age_hours": 24,
+    "demo_score": {
+      "score": 3,
+      "intent_type": "problem_description",
+      "competitor_mentioned": null,
+      "pain_point": "Exploring architecture tradeoffs",
+      "urgency": "low",
+      "reason": "Category-related exploration without active buying intent.",
+      "reply_angle": "Explain where deterministic scripts work better."
+    }
+  },
+  {
+    "id": "t3_demo4",
+    "url": "https://www.reddit.com/r/demo_automation/comments/demo4/example/",
+    "username": "demo_user_4",
+    "communityName": "r/demo_automation",
+    "title": "Demo: AI agents are trending in the news today.",
+    "body": "AI agents are trending in the news today.",
+    "dataType": "post",
+    "age_hours": 32,
+    "demo_score": {
+      "score": 2,
+      "intent_type": "discussion_only",
+      "competitor_mentioned": null,
+      "pain_point": "",
+      "urgency": "low",
+      "reason": "News commentary, not a buyer problem.",
+      "reply_angle": "Do not add a promotional reply."
+    }
+  },
+  {
+    "id": "t3_demo5",
+    "url": "https://www.reddit.com/r/demo_automation/comments/demo5/example/",
+    "username": "demo_user_5",
+    "communityName": "r/demo_automation",
+    "title": "Demo: I built an automation platform. Buy my product!",
+    "body": "I built an automation platform. Buy my product!",
+    "dataType": "post",
+    "age_hours": 40,
+    "demo_score": {
+      "score": 1,
+      "intent_type": "self_promotion",
+      "competitor_mentioned": null,
+      "pain_point": "",
+      "urgency": "low",
+      "reason": "Seller promotion, not a potential customer.",
+      "reply_angle": "Do not reply with a sales pitch."
+    }
+  },
+  {
+    "id": "t3_demo6",
+    "url": "https://www.reddit.com/r/demo_automation/comments/demo6/example/",
+    "username": "demo_user_6",
+    "communityName": "r/demo_automation",
+    "title": "Demo: Anyone have a good pasta recipe?",
+    "body": "Anyone have a good pasta recipe?",
+    "dataType": "post",
+    "age_hours": 48,
+    "demo_score": {
+      "score": 1,
+      "intent_type": "unrelated",
+      "competitor_mentioned": null,
+      "pain_point": "",
+      "urgency": "low",
+      "reason": "Unrelated to the configured category.",
+      "reply_angle": "Do not reply."
+    }
+  },
+  {
+    "id": "t1_comment7",
+    "url": "https://www.reddit.com/r/demo_automation/comments/demo2/example/comment7/",
+    "username": "demo_user_7",
+    "communityName": "r/demo_automation",
+    "title": "Demo: same here",
+    "body": "same here",
+    "dataType": "comment",
+    "age_hours": 56,
+    "demo_score": {
+      "score": 2,
+      "intent_type": "discussion_only",
+      "competitor_mentioned": null,
+      "pain_point": "",
+      "urgency": "low",
+      "reason": "Vague agreement does not establish purchase intent, even with parent context.",
+      "reply_angle": "Only engage if they add a specific problem; no pitch."
+    },
+    "parent_demo_id": "t3_demo2"
+  },
+  {
+    "id": "t3_demo0",
+    "url": "https://www.reddit.com/r/demo_automation/comments/demo0/example/",
+    "username": "demo_user_0",
+    "communityName": "r/demo_automation",
+    "title": "Demo: We need an AI automation platform this week. Any recommendat",
+    "body": "We need an AI automation platform this week. Any recommendations?",
+    "dataType": "post",
+    "age_hours": 0,
+    "demo_score": {
+      "score": 5,
+      "intent_type": "tool_request",
+      "competitor_mentioned": null,
+      "pain_point": "Needs an automation platform now",
+      "urgency": "high",
+      "reason": "Explicit immediate tool evaluation.",
+      "reply_angle": "Ask which workflows and approval controls they need."
+    }
+  },
+  {
+    "dataType": "post",
+    "url": "",
+    "body": ""
+  }
+]

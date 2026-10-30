@@ -1,0 +1,66 @@
+company:
+  name: p95.ai
+  description: AI agent and automation platform.
+  ideal_customer: ''
+  competitors:
+  - resolve.ai
+  pain_phrases:
+  - manual repetitive tasks
+  - workflow automation is unreliable
+  - agents fail in production
+  - too many manual handoffs
+  - need human approval steps
+queries:
+- subreddit:automation AND (title:looking OR title:recommend OR title:help)
+subreddits: []
+relevance_terms:
+- ai agent
+- automation
+- workflow
+- resolve.ai
+- manual handoff
+time_window_days: 7
+few_shot_examples: data/few_shots.json
+database: leads.db
+demo_database: demo_leads.db
+sample_file: data/sample.json
+apify:
+  actor: trudax/reddit-scraper-lite
+  max_items: 50
+  max_runs: 10
+  max_total_charge_usd: 0.25
+  timeout_seconds: 180
+  read_retries: 2
+llm:
+  provider: openai
+  models:
+    openai: gpt-4.1-mini
+    anthropic: claude-haiku-4-5
+  max_output_tokens: 800
+  max_items_per_scan: 100
+  max_text_chars: 8000
+  second_pass: false
+  strong_models:
+    openai: gpt-4.1
+    anthropic: claude-sonnet-4-5
+  prices:
+    gpt-4.1-mini:
+      input: null
+      output: null
+    gpt-4.1:
+      input: null
+      output: null
+    claude-haiku-4-5:
+      input: null
+      output: null
+    claude-sonnet-4-5:
+      input: null
+      output: null
+  max_estimated_cost_usd: 1.0
+safety:
+  live_scans_enabled: false
+collection:
+  total_budget_usd: 5.0
+  max_runs: 2
+  per_run_budget_usd: 0.25
+  max_items: 10

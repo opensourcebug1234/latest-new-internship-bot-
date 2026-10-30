@@ -1,0 +1,12 @@
+.env
+.env.*
+*.env
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+leads.db*
+.cache/
+demo_leads.db*
+*.db.lock

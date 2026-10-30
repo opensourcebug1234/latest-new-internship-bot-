@@ -1,0 +1,130 @@
+[
+  {
+    "input": {
+      "text": "We need an AI automation platform this week. Any recommendations?",
+      "parent_title": "",
+      "parent_body": ""
+    },
+    "output": {
+      "score": 5,
+      "intent_type": "tool_request",
+      "competitor_mentioned": null,
+      "pain_point": "Needs an automation platform now",
+      "urgency": "high",
+      "reason": "Explicit immediate tool evaluation.",
+      "reply_angle": "Ask which workflows and approval controls they need."
+    }
+  },
+  {
+    "input": {
+      "text": "resolve.ai keeps failing our workflow. Looking for an alternative.",
+      "parent_title": "",
+      "parent_body": ""
+    },
+    "output": {
+      "score": 5,
+      "intent_type": "competitor_complaint",
+      "competitor_mentioned": "resolve.ai",
+      "pain_point": "Unreliable existing automation",
+      "urgency": "high",
+      "reason": "Named competitor pain with switching intent.",
+      "reply_angle": "Ask for failure details and share a neutral evaluation checklist."
+    }
+  },
+  {
+    "input": {
+      "text": "Our agents fail in production and I spend hours fixing manual handoffs.",
+      "parent_title": "",
+      "parent_body": ""
+    },
+    "output": {
+      "score": 4,
+      "intent_type": "problem_description",
+      "competitor_mentioned": null,
+      "pain_point": "Agent reliability and manual handoffs",
+      "urgency": "medium",
+      "reason": "Active pain in the configured category.",
+      "reply_angle": "Suggest tracing failures and adding human review at risky steps."
+    }
+  },
+  {
+    "input": {
+      "text": "What are the tradeoffs of AI agents versus scripts?",
+      "parent_title": "",
+      "parent_body": ""
+    },
+    "output": {
+      "score": 3,
+      "intent_type": "problem_description",
+      "competitor_mentioned": null,
+      "pain_point": "Exploring architecture tradeoffs",
+      "urgency": "low",
+      "reason": "Category-related exploration without active buying intent.",
+      "reply_angle": "Explain where deterministic scripts work better."
+    }
+  },
+  {
+    "input": {
+      "text": "AI agents are trending in the news today.",
+      "parent_title": "",
+      "parent_body": ""
+    },
+    "output": {
+      "score": 2,
+      "intent_type": "discussion_only",
+      "competitor_mentioned": null,
+      "pain_point": "",
+      "urgency": "low",
+      "reason": "News commentary, not a buyer problem.",
+      "reply_angle": "Do not add a promotional reply."
+    }
+  },
+  {
+    "input": {
+      "text": "I built an automation platform. Buy my product!",
+      "parent_title": "",
+      "parent_body": ""
+    },
+    "output": {
+      "score": 1,
+      "intent_type": "self_promotion",
+      "competitor_mentioned": null,
+      "pain_point": "",
+      "urgency": "low",
+      "reason": "Seller promotion, not a potential customer.",
+      "reply_angle": "Do not reply with a sales pitch."
+    }
+  },
+  {
+    "input": {
+      "text": "Anyone have a good pasta recipe?",
+      "parent_title": "",
+      "parent_body": ""
+    },
+    "output": {
+      "score": 1,
+      "intent_type": "unrelated",
+      "competitor_mentioned": null,
+      "pain_point": "",
+      "urgency": "low",
+      "reason": "Unrelated to the configured category.",
+      "reply_angle": "Do not reply."
+    }
+  },
+  {
+    "input": {
+      "text": "same here",
+      "parent_title": "AI automation discussion",
+      "parent_body": "Our workflow automation keeps breaking."
+    },
+    "output": {
+      "score": 2,
+      "intent_type": "discussion_only",
+      "competitor_mentioned": null,
+      "pain_point": "",
+      "urgency": "low",
+      "reason": "Vague agreement does not establish purchase intent, even with parent context.",
+      "reply_angle": "Only engage if they add a specific problem; no pitch."
+    }
+  }
+]

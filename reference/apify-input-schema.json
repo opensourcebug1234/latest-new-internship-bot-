@@ -1,0 +1,274 @@
+{
+  "title": "Input schema for Reddit scraper Lite",
+  "description": "Scrape information about posts, communities and users https://www.reddit.com without login.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "description": "If you already have URL(s) of page(s) you wish to scrape, you can set them here. If you want to use the search field below, remove all startUrls here.",
+      "editor": "requestListSources",
+      "placeholderValue": "URL",
+      "items": {
+        "type": "object",
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "description": "URL of the page",
+            "pattern": "(^$|reddit\\.com\\/.+)"
+          }
+        }
+      },
+      "prefill": [
+        {
+          "url": "https://www.reddit.com/r/pasta/comments/vwi6jx/pasta_peperoni_and_ricotta_cheese_how_to_make/"
+        }
+      ]
+    },
+    "skipComments": {
+      "title": "Skip comments",
+      "description": "This will skip scrapping comments when going through posts",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "skipUserPosts": {
+      "title": "Skip user posts",
+      "description": "This will skip scrapping user posts when going through user activity",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "skipCommunity": {
+      "title": "Skip community",
+      "description": "This will skip scrapping community info but will still get community posts if they were not skipped.",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "includeMediaLinks": {
+      "title": "Include media links, up votes and comment count",
+      "description": "This will include upVotes, upVoteRatio, imageUrls, videoUrls, and numberOfComments when scraping posts. Enabling this will use a more detailed extraction method, which may affect performance.",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "searches": {
+      "title": "Search Term",
+      "type": "array",
+      "description": "Here you can provide a search query which will be used to search Reddit`s topics.",
+      "editor": "stringList",
+      "sectionCaption": "Search",
+      "sectionDescription": "This fields will be used on the search and will be ignored when using startUrls"
+    },
+    "searchCommunityName": {
+      "title": "Community (optional)",
+      "type": "string",
+      "description": "If provided, the search will be performed only inside this community (e.g., 'programming').",
+      "editor": "textfield"
+    },
+    "ignoreStartUrls": {
+      "title": "Ignore start URLs",
+      "description": "Mainly used as a fix for ignoring starUrl on Zapier",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "searchPosts": {
+      "title": "Search for posts",
+      "description": "Will search for posts with the provided search",
+      "type": "boolean",
+      "default": true,
+      "editor": "checkbox"
+    },
+    "searchComments": {
+      "title": "Search for comments",
+      "description": "Will search for comments with the provided search",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "searchCommunities": {
+      "title": "Search for communities",
+      "description": "Will search for communities with the provided search",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "searchUsers": {
+      "title": "Search for users",
+      "description": "Will search for users with the provided search",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "searchMedia": {
+      "title": "Search for media",
+      "description": "Will search for media with the provided search",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "sort": {
+      "title": "Sort search",
+      "description": "Sort search by Relevance, Hot, Top, New or Comments",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "",
+        "relevance",
+        "hot",
+        "top",
+        "new",
+        "rising",
+        "comments"
+      ],
+      "enumTitles": [
+        "None",
+        "Relevance",
+        "Hot",
+        "Top",
+        "New",
+        "Rising",
+        "Comments"
+      ],
+      "default": "new",
+      "prefill": "new"
+    },
+    "time": {
+      "title": "Filter by date (Posts only)",
+      "description": "Filter posts by last hour, week, day, month or year",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "all",
+        "hour",
+        "day",
+        "week",
+        "month",
+        "year"
+      ],
+      "enumTitles": [
+        "All time",
+        "Last hour",
+        "Last day",
+        "Last week",
+        "Last month",
+        "Last year"
+      ]
+    },
+    "includeNSFW": {
+      "title": "Include NSFW content",
+      "description": "You can choose to include or exclude NSFW content from your search",
+      "type": "boolean",
+      "default": true,
+      "editor": "checkbox",
+      "sectionCaption": "Filters",
+      "sectionDescription": "Choose the types of results you want to include"
+    },
+    "maxItems": {
+      "title": "Maximum number of items to be saved",
+      "type": "integer",
+      "description": "The maximum number of items that will be saved in the dataset. If you are scrapping for Communities&Users, remember to consider that each category inside a community is saved as a separated item.",
+      "editor": "number",
+      "prefill": 10,
+      "default": 10,
+      "sectionCaption": "Limits"
+    },
+    "maxPostCount": {
+      "title": "Limit of posts scraped inside a single page",
+      "type": "integer",
+      "description": "The maximum number of posts that will be scraped for each Posts Page or Communities&Users URL",
+      "editor": "number",
+      "prefill": 10,
+      "default": 10
+    },
+    "postDateLimit": {
+      "title": "Post date limit",
+      "type": "string",
+      "description": "Use this value to only retrieve posts published after a specific date.",
+      "editor": "datepicker"
+    },
+    "commentDateLimit": {
+      "title": "Comment date limit",
+      "type": "string",
+      "description": "Use this value to only retrieve comments published after a specific date inside a post.",
+      "editor": "datepicker"
+    },
+    "maxComments": {
+      "title": "Limit of comments scraped inside a single page",
+      "type": "integer",
+      "description": "The maximum number of comments that will be scraped for each Comments Page. If you don't want to scrape comments you can set this to zero.",
+      "editor": "number",
+      "prefill": 10,
+      "default": 10
+    },
+    "maxCommunitiesCount": {
+      "title": "Limit of `Communities`'s pages scraped",
+      "type": "integer",
+      "description": "The maximum number of `Communities`'s pages that will be scraped if your search or startUrl is a Communities type.",
+      "editor": "number",
+      "prefill": 2,
+      "default": 2
+    },
+    "maxUserCount": {
+      "title": "Limit of `Users`'s pages scraped",
+      "type": "integer",
+      "description": "The maximum number of `Users`'s pages that will be scraped.",
+      "editor": "number",
+      "prefill": 2,
+      "default": 2
+    },
+    "scrollTimeout": {
+      "title": "Page scroll timeout (seconds)",
+      "type": "integer",
+      "description": "Set the timeout in seconds in which the page will stop scrolling down to load new items",
+      "editor": "number",
+      "prefill": 40,
+      "default": 40
+    },
+    "navigationTimeout": {
+      "title": "Navigation timeout (seconds)",
+      "type": "integer",
+      "description": "Set the navigation timeout in seconds for page loading",
+      "editor": "number",
+      "prefill": 60,
+      "default": 60,
+      "minimum": 20,
+      "maximum": 60
+    },
+    "proxy": {
+      "title": "Proxy configuration",
+      "type": "object",
+      "description": "Either use Apify proxy, or provide your own proxy servers.",
+      "sectionCaption": "Proxy Settings",
+      "sectionDescription": "All settings bellow are ignored on the Lite version. The Lite version of the actor does not require proxy settings and they will be ignored.",
+      "prefill": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": [
+          "RESIDENTIAL"
+        ]
+      },
+      "default": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": [
+          "RESIDENTIAL"
+        ]
+      },
+      "editor": "proxy"
+    },
+    "debugMode": {
+      "title": "Debug Mode",
+      "type": "boolean",
+      "description": "Activate to see detailed logs",
+      "default": false,
+      "editor": "checkbox"
+    }
+  },
+  "required": []
+}
